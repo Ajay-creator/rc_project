@@ -68,7 +68,7 @@ class ImageBlot extends BlockEmbed {
     const imgTag = super.create();
     imgTag.setAttribute("src", value.src);
     imgTag.setAttribute("alt", value.alt);
-    imgTag.setAttribute("width", "100%");
+    // imgTag.setAttribute("width", "100%");
     return imgTag;
   }
 

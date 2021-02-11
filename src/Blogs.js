@@ -113,10 +113,12 @@ function Blogs() {
         <Grid container spacing={3}>
           {/* for looop here  */}
           {blogs?.map((blog) => (
-            <BlogCard blog="blog" />
+            <BlogCard blog={blog} />
           ))}
+          
           {/* loop ends here */}
         </Grid>
+        
         {/* for pagination below is the coede snippet */}
         {/* <Box my={4} className={classes.paginationContainer}>
           <Pagination count={10} />

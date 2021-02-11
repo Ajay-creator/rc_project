@@ -60,59 +60,58 @@ const useStyles = makeStyles((theme) => ({
   title: { textAlign: "left" },
 }));
 function BlogCard(props) {
-  console.log(props);
+  // console.log(props);
   const blog = props.blog;
   const classes = useStyles();
   return (
-    <div>
-      <Link
-        // to={`/postPage/${blog.id}`}
-        to={{
-          pathname: "./postPage",
-          state: {
-            blog: blog,
-          },
-        }}
-      >
-        <Grid item xs={12} sm={6} md={4}>
-          <Card className={classes.card}>
-            <CardActionArea>
-              <CardMedia
-                className={classes.media}
-                image="https://images.pexels.com/photos/2004161/pexels-photo-2004161.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                title="Contemplative Reptile"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                  React useContext
-                </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  Lizards are a widespread group of squamate reptiles, with over
-                  6,000 species, ranging across all continents except Antarctica
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions className={classes.cardActions}>
-              <Box className={classes.author}>
-                <Avatar src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
-                <Box ml={2}>
-                  <Typography variant="subtitle2" component="p">
-                    {blog.data.author}
-                  </Typography>
-                  <Typography
-                    variant="subtitle2"
-                    color="textSecondary"
-                    component="p"
-                  >
-                    {moment(blog.data.created.toDate()).calendar()}
-                  </Typography>
-                </Box>
-              </Box>
-            </CardActions>
-          </Card>
-        </Grid>
-      </Link>
-    </div>
+    <Grid item xs={12} sm={6} md={4}>
+      <Card className={classes.card}>
+        <CardActionArea>
+          <Link
+            // to={`/postPage/${blog.id}`}
+            to={{
+              pathname: "./postPage",
+              state: {
+                blog: blog,
+              },
+            }}
+            style={{ textDecoration: "none" }}
+          >
+            <CardMedia
+              className={classes.media}
+              image="https://images.pexels.com/photos/2004161/pexels-photo-2004161.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+              title="Contemplative Reptile"
+            />
+          </Link>
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="h2">
+              React useContext
+            </Typography>
+            <Typography variant="body2" color="textSecondary" component="p">
+              Lizards are a widespread group of squamate reptiles, with over
+              6,000 species, ranging across all continents except Antarctica
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+        <CardActions className={classes.cardActions}>
+          <Box className={classes.author}>
+            <Avatar src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
+            <Box ml={2}>
+              <Typography variant="subtitle2" component="p">
+                {blog.data.author}
+              </Typography>
+              <Typography
+                variant="subtitle2"
+                color="textSecondary"
+                component="p"
+              >
+                {moment(blog.data.created.toDate()).calendar()}
+              </Typography>
+            </Box>
+          </Box>
+        </CardActions>
+      </Card>
+    </Grid>
   );
 }
 
