@@ -1,0 +1,34 @@
+.header {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #2778b8;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    margin: 10px 20px 0px 20px;
+}
+
+.header_logo {
+    width: 50px;
+    object-fit: contain;
+    margin: 0 20px;
+}
+
+.header_option {
+    display: flex;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
+}
+
+.header_nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.user_name {
+    color: white;
+    position: absolute;
+    right: 20px;
+}
