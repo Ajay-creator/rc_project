@@ -9,6 +9,8 @@ import Blogs from "./Blogs";
 import Login from "./Login";
 import CreatePage from "./CreatePage";
 import PostPage from "./PostPage";
+import MyAccount from "./MyAccount";
+import Projects from "./Projects";
 // k ra
 function App() {
   const [{ blogs }, dispatch] = useStateValue();
@@ -39,7 +41,7 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-          <Route path="/postPage" component={PostPage}/>
+          <Route path="/postPage" component={PostPage} />
 
           <Route path="/createBlog">
             <Header />
@@ -47,6 +49,14 @@ function App() {
           </Route>
           <Route path="/login">
             <Login />
+          </Route>
+          <Route path="/myAccount">
+            <Header />
+            <MyAccount />
+          </Route>
+          <Route path="/projects">
+            <Header />
+            <Projects />
           </Route>
           <Route path="/blogs">
             <Header />

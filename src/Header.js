@@ -27,9 +27,12 @@ function Header() {
             <span> Blogs </span>
           </div>
         </Link>
-        <div className="header_option">
-          <span> projects </span>
-        </div>
+        <Link to="/projects">
+          <div className="header_option">
+            <span> projects </span>
+          </div>
+        </Link>
+
         <div className="header_option">
           <span> Gallery </span>
         </div>
@@ -45,7 +48,7 @@ function Header() {
         {!user ? (
           ""
         ) : (
-          <Link to="/">
+          <Link to="/myAccount">
             <div className="header_option">
               <span> My account </span>
             </div>
